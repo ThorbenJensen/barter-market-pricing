@@ -1,9 +1,10 @@
 ### TEST 'prizing_from_observations.R'
 
 library(testthat)
+context("prizing_from_observations.R")
 
 # import function
-source("prizing_from_observations.R")
+source("../src/prizing_from_observations.R")
 
 # define test case
 transactions <- data.frame(a = c(1, 0, 0), b = c(0, 0, 0), c = c(-1, 0, 0)) 
