@@ -1,5 +1,5 @@
 test:
-	R -e 'setwd("src"); library(testthat); test_dir("../tests/.")'
+	R -e 'library(testthat); test_dir("tests/.")'
 
 docker-build:
 	docker build -t barter-market-pricing .
