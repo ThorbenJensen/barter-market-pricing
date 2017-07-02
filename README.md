@@ -1,20 +1,20 @@
-# Docker instructions
+# Barter market prixing
 
-## Build container
+An R project on modeling implicit prices in barter markets.
+The values of goods are revealed through barter transactions.
+A model is used for assigning explicit price tags to the goods.
 
-docker build -t test .
+## Docker instructions
 
-## Run container
+* Build container: *make docker-build*
+* Run container: *make docker-run*
+* Access process in browser:
+  + Go to *http://localhost:8787/*
+  + username: *rstudio*
+  + password: *rstudio*
 
-docker run --rm -p 8787:8787 test
+## Run code example
 
-## Access container
+* Set working directory to bin/ folder
+* Execute R scripts
 
-In browser, access http://localhost:8787/
-username: rstudio
-password: rstudio
-
-## Run script
-
-Use Rstudio to run script.
-By convention, set working directory to 'src' folder: setwd('src')
