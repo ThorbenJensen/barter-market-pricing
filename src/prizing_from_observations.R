@@ -1,4 +1,4 @@
-### PRIZING A BARTER MARKET BASED ON OBSERVED TRANSACTIONS
+### PRIZE A BARTER MARKET BASED ON OBSERVED TRANSACTIONS
 ### szenario: to estimate market values from OBSERVED barter transactions
 
 # transaction matrix (rows: number positive goods traded against negative ones)
@@ -8,7 +8,17 @@ transactions <-
              c = c(0, -3, -6))
 
 # estimating values of good, expressed relative to the least valuable one
-fit <- lm(c ~ a + b + 0, data = transactions)
+get_exchange_rates <- function(transactions) {
+  
+  fit <- lm(c ~ a + b + 0, data = transactions)
+  
+  # return estimated values of other items
+  result <- fit$coefficients * -1
+  return(data.frame(result))
+}
 
-# return estimated values of other items
-fit$coefficients * -1
+# print results
+print("Value of goods A and B, expressed relative to C:")
+exchange_rates <- get_exchange_rates(transactions)
+print.data.frame(exchange_rates)
+
