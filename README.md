@@ -6,8 +6,7 @@ A model is used for assigning explicit price tags to the goods.
 
 ## Docker instructions
 
-* Build container: *make docker-build*
-* Run container: *make docker-run*
+* Build and run container: *docker-compose up*
 * Access process in browser:
   + Go to *http://localhost:8787/*
   + username: *rstudio*
