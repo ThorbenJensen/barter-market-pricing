@@ -2,7 +2,7 @@
 
 get_exchange_rates <- function(transactions) {
   
-  fit <- lm(c ~ a + b + 0, data = transactions)
+  fit <-lm(c ~ a + b + 0, data = transactions)
   
   # return estimated values of other items
   result <- fit$coefficients * -1
