@@ -8,4 +8,4 @@ install:
   - Rscript -e 'install.packages("lintr")'
 
 script:
-  - Rscript -e 'files <- dir("src", full.names = T, recursive = T); for (file in files) { ifelse(!lintr::lint(file)=="", warning(lintr::lint(file), ) };'
+  - Rscript -e 'files <- dir("src", full.names = T, recursive = T); for (file in files) { ifelse(!lintr::lint(file)=="", warning(lintr::lint(file)), ) };'
