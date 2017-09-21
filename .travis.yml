@@ -2,6 +2,8 @@
 
 language: R
 
+install:
+  - Rscript -e 'install.packages("lintr")'
+
 script:
-  - R -e 'install.packages("lintr")'
-  - R -e 'lintr::lint_package()'
+  - Rscript -e 'lintr::lint_package()'
