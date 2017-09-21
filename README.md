@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ThorbenJensen/barter-market-pricing.svg?branch=master)](https://travis-ci.org/ThorbenJensen/barter-market-pricing)
+
 # Barter market prixing
 
 An R project on modeling implicit prices in barter markets.
