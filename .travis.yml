@@ -6,4 +6,4 @@ install:
   - Rscript -e 'install.packages("lintr")'
 
 script:
-  - Rscript -e 'lintr::lint_package()'
+  - Rscript -e 'files <- dir("src", full.names = T, recursive = T); for (file in files) { print(lintr::lint(file)) };'

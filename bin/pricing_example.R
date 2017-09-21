@@ -11,5 +11,5 @@ transactions <- data.frame(a = c(1, 0, 1),
 # print results
 print("Value of goods A and B, expressed relative to C:")
 exchange_rates <- get_exchange_rates(transactions)
-print.data.frame(exchange_rates)
+print.data.frame(exchange_rate)
 
